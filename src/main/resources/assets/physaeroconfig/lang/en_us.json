@@ -1,0 +1,24 @@
+{
+  "title.physaeroconfig.intro": "First-Launch Setup: Animated Intro",
+  "question.physaeroconfig.intro": "Do you want to keep the animated intro?",
+  "button.physaeroconfig.yes": "Yes",
+  "button.physaeroconfig.no": "No",
+  
+  "title.physaeroconfig.account": "First-Launch Setup: Account System",
+  "question.physaeroconfig.account": "Which account system do you want to use?",
+  "option.physaeroconfig.e4all": "e4all (Supports offline accounts, less stable)",
+  "option.physaeroconfig.essentials": "Essentials (Online accounts only, very stable)",
+  "button.physaeroconfig.confirm": "Confirm & Finish Setup",
+  
+  "yacl.physaeroconfig.title": "PhysAero Config",
+  "yacl.physaeroconfig.category.general": "General Settings",
+  "yacl.physaeroconfig.keep_intro": "Keep Animated Intro",
+  "yacl.physaeroconfig.keep_intro.desc": "If disabled, FancyMenu's allow_game_intro_skip setting will be set to true.",
+  "yacl.physaeroconfig.account_system": "Account System",
+  "yacl.physaeroconfig.account_system.desc": "Choose between e4all (offline support) and Essentials (online only).",
+  "yacl.physaeroconfig.rerun_wizard": "Re-run Setup Wizard",
+  "yacl.physaeroconfig.rerun_wizard.desc": "Reset the setup state so the first-launch setup wizard popup appears again.",
+
+  "notification.physaeroconfig.restart_title": "⚠ Restart Required",
+  "notification.physaeroconfig.restart_desc": "Restart Minecraft for account system changes."
+}

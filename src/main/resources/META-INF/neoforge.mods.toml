@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="physaeroconfig"
+version="${mod_version}"
+displayName="PhysAero Config"
+logoFile="icon.png"
+authors="PhysAero"
+description="First-launch setup wizard and configuration mod for Minecraft modpacks."
+displayTest="NONE"
+
+[[dependencies.physaeroconfig]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.0,)"
+    ordering="NONE"
+    side="CLIENT"
+
+[[dependencies.physaeroconfig]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1,1.22)"
+    ordering="NONE"
+    side="CLIENT"
