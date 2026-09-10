@@ -23,7 +23,8 @@ public class HandlerTest {
         List<String> optionsLines = List.of(
                 "##[loading]",
                 "B:allow_game_intro_skip = 'false';",
-                "S:game_intro_animation_name = '[source:local]/config/fancymenu/assets/reimaginedintro/intro.fma';"
+                "S:game_intro_animation_name = '[source:local]/config/fancymenu/assets/reimaginedintro/intro.fma';",
+                "S:preload_resources = '[source:local]config/fancymenu/assets/reimaginedintro/intro.fma';"
         );
         Files.write(optionsFile, optionsLines, StandardCharsets.UTF_8);
 
@@ -45,6 +46,7 @@ public class HandlerTest {
         updatedOptions = Files.readAllLines(optionsFile, StandardCharsets.UTF_8);
         assertTrue(updatedOptions.contains("B:allow_game_intro_skip = 'false';"));
         assertTrue(updatedOptions.contains("S:game_intro_animation_name = '[source:local]/config/fancymenu/assets/reimaginedintro/intro.fma';"));
+        assertTrue(updatedOptions.contains("S:preload_resources = '[source:local]config/fancymenu/assets/reimaginedintro/intro.fma%!source_end!%[source:local]config/fancymenu/assets/reimaginedintro/audio.ogg';"));
     }
 
     @Test
