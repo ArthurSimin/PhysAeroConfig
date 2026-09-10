@@ -11,11 +11,21 @@ authors="PhysAero"
 description="First-launch setup wizard and configuration mod for Minecraft modpacks."
 displayTest="NONE"
 
+[[mixins]]
+config="physaeroconfig.mixins.json"
+
 [[dependencies.physaeroconfig]]
     modId="neoforge"
     type="required"
     versionRange="[21.1.0,)"
     ordering="NONE"
+    side="CLIENT"
+
+[[dependencies.physaeroconfig]]
+    modId="fancymenu"
+    type="optional"
+    versionRange="[3.9.12,3.10)"
+    ordering="AFTER"
     side="CLIENT"
 
 [[dependencies.physaeroconfig]]

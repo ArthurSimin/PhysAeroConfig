@@ -15,8 +15,6 @@ public class FancyMenuHandler {
     private static final Logger LOGGER = LoggerFactory.getLogger(FancyMenuHandler.class);
     private static final String SKIP_KEY = "B:allow_game_intro_skip";
     private static final String ANIMATION_KEY = "S:game_intro_animation_name";
-    private static final String PRELOAD_KEY = "S:preload_resources";
-    private static final String INTRO_AUDIO = "[source:local]config/fancymenu/assets/reimaginedintro/audio.ogg";
 
     /**
      * Applies intro settings to FancyMenu's options.txt.
@@ -73,8 +71,6 @@ public class FancyMenuHandler {
                         } else {
                             updatedLines.add(line);
                         }
-                    } else if (trimmed.startsWith(PRELOAD_KEY)) {
-                        updatedLines.add(addPreloadResource(line, INTRO_AUDIO));
                     } else {
                         updatedLines.add(line);
                     }
@@ -120,22 +116,6 @@ public class FancyMenuHandler {
             return line.substring(firstQuote + 1, lastQuote).trim().isEmpty();
         }
         return true;
-    }
-
-    private static String addPreloadResource(String line, String resource) {
-        if (line.contains(resource)) {
-            return line;
-        }
-
-        int lastQuote = line.lastIndexOf('\'');
-        if (lastQuote < 0) {
-            return line;
-        }
-
-        String separator = line.substring(0, lastQuote).endsWith("'")
-                ? ""
-                : "%!source_end!%";
-        return line.substring(0, lastQuote) + separator + resource + line.substring(lastQuote);
     }
 
     private static void saveIntroLine(Path gameDir, String line) {

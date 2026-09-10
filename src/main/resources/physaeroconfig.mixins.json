@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.physaero.config.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "GameIntroOverlayMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

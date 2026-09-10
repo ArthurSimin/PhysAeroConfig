@@ -4,10 +4,11 @@
 
 ### Fixed
 
-- Fixed the animated intro music not playing when the intro was enabled again.
-- Added the intro audio file to FancyMenu's resource preload list so it is ready after the Minecraft sound engine initializes.
-- Prevented duplicate intro audio entries from being added when the setting is applied more than once.
+- Fixed the animated intro music by playing it through Minecraft's sound engine at the same lifecycle point where FancyMenu starts the visual intro.
+- Packaged the intro OGG as the `physaeroconfig:reimagined_intro` sound event.
+- Stopped the intro sound when FancyMenu closes or replaces the intro overlay early.
+- Removed the obsolete FancyMenu audio preload mutation, which could not make visual-only FMA resources play audio.
 
 ### Testing
 
-- Added a regression test covering restoration of the animated intro and preloading of its audio.
+- Updated the regression test to verify intro restoration no longer mutates FancyMenu's preload list with audio.
