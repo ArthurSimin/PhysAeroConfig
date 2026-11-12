@@ -24,7 +24,7 @@ config="physaeroconfig.mixins.json"
 [[dependencies.physaeroconfig]]
     modId="fancymenu"
     type="optional"
-    versionRange="[3.9.12,3.10)"
+    versionRange="[3.9.12,)"
     ordering="AFTER"
     side="CLIENT"
 

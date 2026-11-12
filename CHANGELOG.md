@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.6
+
+### Fixed
+
+- Widened the optional FancyMenu dependency range from `[3.9.12,3.10)` to `[3.9.12,)` so FancyMenu 3.10.x and newer are accepted instead of blocking startup with an incompatible-version error.
+- Verified the intro audio mixin against FancyMenu 3.10.0: the `GameIntroOverlay.render`, `close`, and `onReplaced` methods and the injected `PlayableResource.play()` call are unchanged.
+
 ## 1.0.5
 
 ### Fixed
